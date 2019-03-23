@@ -69,23 +69,16 @@ if (isset($searchQuery) && !empty($searchQuery)) {
                 ?>
             </div>
         </div>
-
-        
-
     </div>
 
     <div class="col col-sm-7" style="padding-left: 25px;">
-        <pre>
-            <code>
-                <?php 
-                echo $content;
-                // https://www.gutenberg.org/files/59101/59101-0.txt
-                // http://www.norvig.com/oreskes.html
-                // http://norvig.com/chomsky.html
-
-                ?>
-            </code>
-        </pre>
+        <?php 
+        if (isset($content) && !empty($content)) {
+            echo "<pre><code>";
+            echo $content;
+            echo "</code></pre>";
+        }
+        ?>            
     </div>
 </div>
 
